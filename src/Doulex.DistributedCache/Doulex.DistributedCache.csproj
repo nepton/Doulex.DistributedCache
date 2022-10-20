@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
@@ -9,7 +9,7 @@
 
     <PropertyGroup>
         <PackageId>Doulex.DistributedCache</PackageId>
-        <VersionPrefix>1.0.0</VersionPrefix>
+		<VersionPrefix>1.0</VersionPrefix>
         <Authors>Nepton Liu</Authors>
         <Description>the extension of DistributedCache</Description>
         <PackageTags>cache;caching;distributed;</PackageTags>
@@ -19,7 +19,6 @@
 
         <IncludeSymbols>True</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
         <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
     </PropertyGroup>
 
