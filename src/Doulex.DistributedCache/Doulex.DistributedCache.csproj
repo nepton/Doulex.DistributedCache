@@ -11,9 +11,9 @@
         <PackageId>Doulex.DistributedCache</PackageId>
         <VersionPrefix>1.0.0</VersionPrefix>
         <Authors>Nepton Liu</Authors>
-        <Description>Useful toolkit for dev</Description>
-        <PackageTags>toolkit;tool;utility</PackageTags>
-        <PackageProjectUrl>https://github.com/nepton/doulex</PackageProjectUrl>
+        <Description>the extension of DistributedCache</Description>
+        <PackageTags>cache;caching;distributed;</PackageTags>
+        <PackageProjectUrl>https://github.com/nepton/doulex-distributed-cache</PackageProjectUrl>
         <PackageIcon>app.png</PackageIcon>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
 
