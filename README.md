@@ -30,7 +30,7 @@ public void ConfigureServices(IServiceCollection services)
     services.AddDistributedMemoryCache()
     
     // add the extension of distributed cache
-    services.AddDistributedCacheExtension();
+    services.AddDistributedCacheExtensions();
 }
 ```
 
