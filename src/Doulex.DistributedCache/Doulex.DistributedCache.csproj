@@ -13,10 +13,10 @@
         <PackageTags>cache;caching;distributed;object</PackageTags>
         <PackageProjectUrl>https://github.com/nepton/Doulex.DistributedCache</PackageProjectUrl>
         <RepositoryUrl>https://github.com/nepton/Doulex.DistributedCache.git</RepositoryUrl>
-        <PackageIcon>icon.png</PackageIcon>
-        <PackageReadmeFile>readme.md</PackageReadmeFile>
 
         <Authors>Nepton Liu</Authors>
+        <PackageIcon>icon.png</PackageIcon>
+        <PackageReadmeFile>readme.md</PackageReadmeFile>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <IncludeSymbols>True</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>

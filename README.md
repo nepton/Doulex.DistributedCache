@@ -1,5 +1,5 @@
 # Doulex.DistributedCache
-[![Build status](https://ci.appveyor.com/api/projects/status/6yuxsfe71po3ofqg?svg=true)](https://ci.appveyor.com/project/nepton/thingsboard-net)
+[![Build status](https://ci.appveyor.com/api/projects/status/21y6ksao6ll7gwgp?svg=true)](https://ci.appveyor.com/project/nepton/doulex-distributedcache)
 ![GitHub issues](https://img.shields.io/github/issues/nepton/Doulex.DistributedCache.svg)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nepton/Doulex.DistributedCache/blob/master/LICENSE)  
 
