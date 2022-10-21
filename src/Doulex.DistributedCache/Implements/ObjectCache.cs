@@ -2,7 +2,7 @@
 
 namespace Doulex.DistributedCache;
 
-public class ObjectCache<T> : IObjectCache<T> where T : class
+public sealed class ObjectCache<T> : IObjectCache<T> where T : class
 {
     private readonly IDistributedCache _cache;
     private readonly IObjectSerializer _serializer;
@@ -81,7 +81,7 @@ public class ObjectCache<T> : IObjectCache<T> where T : class
 
     public string CacheKeyPrefix { get; set; } = $"{typeof(T).Name}";
 
-    protected virtual string GetCacheKey(object id)
+    private string GetCacheKey(object id)
     {
         return $"{CacheKeyPrefix}-{id}";
     }

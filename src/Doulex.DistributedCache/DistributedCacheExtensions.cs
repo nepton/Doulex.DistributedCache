@@ -4,12 +4,12 @@ using Newtonsoft.Json;
 namespace Doulex.DistributedCache;
 
 /// <summary>
-/// 分布式缓存扩展方法
+/// Distributed cache extension approach
 /// </summary>
 public static class DistributedCacheExtensions
 {
     /// <summary>
-    /// 从缓冲区读取对象, 如果不存在, 执行 valueFactory 生成, 并写入 Cache
+    /// Read the object from the buffer, if it does not exist, perform valueFactory generation, and write it to Cache
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="distributedCache"></param>
@@ -28,7 +28,7 @@ public static class DistributedCacheExtensions
     }
 
     /// <summary>
-    /// 从缓冲区读取对象, 如果不存在, 执行 valueFactory 生成, 并写入 Cache
+    /// Read the object from the buffer, if it does not exist, perform valueFactory generation, and write it to Cache
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="distributedCache"></param>
@@ -47,7 +47,7 @@ public static class DistributedCacheExtensions
     }
 
     /// <summary>
-    /// 从缓冲区读取对象, 如果不存在, 执行 valueFactory 生成, 并写入 Cache
+    /// Read the object from the buffer, if it does not exist, perform valueFactory generation, and write it to Cache
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="distributedCache"></param>
@@ -70,7 +70,7 @@ public static class DistributedCacheExtensions
     }
 
     /// <summary>
-    /// 从缓冲区读取对象, 如果不存在, 执行 valueFactory 生成, 并写入 Cache
+    /// Read the object from the buffer, if it does not exist, perform valueFactory generation, and write it to Cache
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="distributedCache"></param>
@@ -89,7 +89,7 @@ public static class DistributedCacheExtensions
     }
 
     /// <summary>
-    /// 从缓冲区读取对象, 如果不存在, 执行 valueFactory 生成, 并写入 Cache
+    /// Read the object from the buffer, if it does not exist, perform valueFactory generation, and write it to Cache
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="distributedCache"></param>
@@ -110,7 +110,7 @@ public static class DistributedCacheExtensions
     }
 
     /// <summary>
-    /// 从缓冲区读取对象, 如果不存在, 执行 valueFactory 生成, 并写入 Cache
+    /// Read the object from the buffer, if it does not exist, perform valueFactory generation, and write it to Cache
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="distributedCache"></param>
@@ -146,7 +146,7 @@ public static class DistributedCacheExtensions
     }
 
     /// <summary>
-    /// 尝试创建对象
+    /// Trying to create an object
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="value"></param>
