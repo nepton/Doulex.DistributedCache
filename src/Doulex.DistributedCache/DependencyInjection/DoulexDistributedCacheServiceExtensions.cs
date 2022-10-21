@@ -10,7 +10,7 @@ public static class DoulexDistributedCacheServiceExtensions
     /// <param name="services"></param>
     /// <returns></returns>
     /// <exception cref="ArgumentNullException"></exception>
-    public static IServiceCollection AddDoulexDistributedCache(this IServiceCollection services)
+    public static IServiceCollection AddDistributedCacheExtensions(this IServiceCollection services)
     {
         if (services == null) throw new ArgumentNullException(nameof(services));
         AddService(services);
