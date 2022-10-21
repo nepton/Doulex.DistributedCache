@@ -9,26 +9,28 @@
 
     <PropertyGroup>
         <PackageId>Doulex.DistributedCache</PackageId>
-		<VersionPrefix>1.0</VersionPrefix>
-        <Authors>Nepton Liu</Authors>
         <Description>the extension of DistributedCache</Description>
-        <PackageTags>cache;caching;distributed;</PackageTags>
-        <PackageProjectUrl>https://github.com/nepton/doulex-distributed-cache</PackageProjectUrl>
-        <PackageIcon>app.png</PackageIcon>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageTags>cache;caching;distributed;object</PackageTags>
+        <PackageProjectUrl>https://github.com/nepton/Doulex.DistributedCache</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/nepton/Doulex.DistributedCache.git</RepositoryUrl>
+        <PackageIcon>icon.png</PackageIcon>
+        <PackageReadmeFile>readme.md</PackageReadmeFile>
 
+        <Authors>Nepton Liu</Authors>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <IncludeSymbols>True</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
         <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include="app.png" Pack="true" PackagePath="\" />
+        <None Include="..\..\icon.png" Pack="true" PackagePath="\" />
+        <None Include="..\..\README.md" Pack="true" PackagePath="\" />
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="6.0.0" />
-      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+        <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="6.0.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     </ItemGroup>
 
 </Project>
