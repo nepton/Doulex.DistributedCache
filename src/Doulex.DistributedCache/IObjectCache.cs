@@ -6,11 +6,11 @@ public interface IObjectCache<T>
 {
     Task<T?> GetAsync(object id, CancellationToken cancel = default);
 
-    Task SetAsync(object id, T obj, CancellationToken cancel = default);
+    Task SetAsync(object id, T? obj, CancellationToken cancel = default);
     
-    Task SetAsync(object id, T obj, Action<DistributedCacheEntryOptions> optionsCallback, CancellationToken cancel = default);
+    Task SetAsync(object id, T? obj, Action<DistributedCacheEntryOptions> optionsCallback, CancellationToken cancel = default);
 
-    Task SetAsync(object id, T obj, DistributedCacheEntryOptions options, CancellationToken cancel = default);
+    Task SetAsync(object id, T? obj, DistributedCacheEntryOptions options, CancellationToken cancel = default);
 
     Task<T?> GetOrAddAsync(object id, Func<Task<T?>> valueFactory, CancellationToken cancel = default);
 

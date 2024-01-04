@@ -5,7 +5,7 @@ namespace Doulex.DistributedCache.DependencyInjection;
 public static class DoulexDistributedCacheServiceExtensions
 {
     /// <summary>
-    /// Adds the thingsboard client sdk api services. 
+    /// Adds the client sdk api services. 
     /// </summary>
     /// <param name="services"></param>
     /// <returns></returns>

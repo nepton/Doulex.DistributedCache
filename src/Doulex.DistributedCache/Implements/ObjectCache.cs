@@ -17,19 +17,19 @@ public sealed class ObjectCache<T> : IObjectCache<T> where T : class
     {
         var key   = GetCacheKey(id);
         var value = await _cache.GetAsync(key, cancel);
-        if (value == null)
+        if (!(value?.Length > 0))
             return null;
 
         var result = _serializer.Deserialize<T>(value);
         return result;
     }
 
-    public Task SetAsync(object id, T obj, CancellationToken cancel = default)
+    public Task SetAsync(object id, T? obj, CancellationToken cancel = default)
     {
         return SetAsync(id, obj, new DistributedCacheEntryOptions(), cancel);
     }
 
-    public Task SetAsync(object id, T obj, Action<DistributedCacheEntryOptions> optionsCallback, CancellationToken cancel = default)
+    public Task SetAsync(object id, T? obj, Action<DistributedCacheEntryOptions> optionsCallback, CancellationToken cancel = default)
     {
         var options = new DistributedCacheEntryOptions();
         optionsCallback(options);
@@ -37,12 +37,10 @@ public sealed class ObjectCache<T> : IObjectCache<T> where T : class
         return SetAsync(id, obj, options, cancel);
     }
 
-    public Task SetAsync(object id, T obj, DistributedCacheEntryOptions options, CancellationToken cancel = default)
+    public Task SetAsync(object id, T? obj, DistributedCacheEntryOptions options, CancellationToken cancel = default)
     {
-        if (obj == null) throw new ArgumentNullException(nameof(obj));
-
         var cacheKey = GetCacheKey(id);
-        var value    = _serializer.Serialize(obj);
+        var value    = obj != null ? _serializer.Serialize(obj) : Array.Empty<byte>();
         return _cache.SetAsync(cacheKey, value, options, cancel);
     }
 
@@ -51,7 +49,11 @@ public sealed class ObjectCache<T> : IObjectCache<T> where T : class
         return GetOrAddAsync(id, valueFactory, new DistributedCacheEntryOptions(), cancel);
     }
 
-    public Task<T?> GetOrAddAsync(object id, Func<Task<T?>> valueFactory, Action<DistributedCacheEntryOptions> optionsCallback, CancellationToken cancel = default)
+    public Task<T?> GetOrAddAsync(
+        object                               id,
+        Func<Task<T?>>                       valueFactory,
+        Action<DistributedCacheEntryOptions> optionsCallback,
+        CancellationToken                    cancel = default)
     {
         var options = new DistributedCacheEntryOptions();
         optionsCallback?.Invoke(options);
