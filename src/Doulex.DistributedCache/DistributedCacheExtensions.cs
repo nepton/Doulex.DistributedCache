@@ -151,8 +151,11 @@ public static class DistributedCacheExtensions
     /// <typeparam name="T"></typeparam>
     /// <param name="value"></param>
     /// <returns></returns>
-    private static T? TryDeserializeObject<T>(string value)
+    private static T? TryDeserializeObject<T>(string? value)
     {
+        if (value == null)
+            return default;
+
         try
         {
             return JsonConvert.DeserializeObject<T>(value);
