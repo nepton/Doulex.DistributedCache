@@ -3,7 +3,7 @@ version: '{build}'
 image: Visual Studio 2022
 
 environment:
-  VERSION: 1.1.0
+  VERSION: 1.2.0
   TARGET_CONFIGURATION: Release
 
 platform: Any CPU
